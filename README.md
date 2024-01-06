@@ -114,3 +114,15 @@ Performing hierarchical clustering on paper using the given distance matrix. Her
 The dendrogram is a tree-like diagram that shows this process. Each merge is represented by a line connecting the two clusters that were merged. The height of the line is the distance between the two clusters.
 
 ![alt text](dendrogram.png)
+
+**question 3:** Below are the types of distance measures of two vectors,
+
+![alt text](dis.png)
+
+![alt text](DM_HW_03__2.png)
+
+a) Obtain the vector of the above images based on the number of blue, red and yellow colors.
+
+b) Using distance criteria, get the distance of images a, b, c, d from image q and determine the closest image to q.
+
+c) Create a new feature vector for images in such a way that the best result is obtained using the arbitrary distance criterion from the above criteria.
