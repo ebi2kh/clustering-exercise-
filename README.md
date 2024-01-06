@@ -95,7 +95,7 @@ The image in c part is a scatter plot representing the results of the k-means cl
 
 **question 2**:Consider the following distance matrix for data A to D. Cluster the data using hierarchical clustering (agglomerative). and than Draw its dendrogram.
 
-![alt text](images\DM_HW_03.jpg)
+![alt text](\images\DM_HW_03.jpg)
 
 **answer:**
 
@@ -113,13 +113,13 @@ Performing hierarchical clustering on paper using the given distance matrix. Her
 
 The dendrogram is a tree-like diagram that shows this process. Each merge is represented by a line connecting the two clusters that were merged. The height of the line is the distance between the two clusters.
 
-![alt text](images\dendrogram.png)
+![alt text](\images\dendrogram.png)
 
 **question 3:** Below are the types of distance measures of two vectors,
 
-![alt text](images\dis.png)
+![alt text](\images\dis.png)
 
-![alt text](images\DM_HW_03__2.png)
+![alt text](\images\DM_HW_03__2.png)
 
 a) Obtain the vector of the above images based on the number of blue, red and yellow colors.
 
