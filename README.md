@@ -95,7 +95,7 @@ The image in c part is a scatter plot representing the results of the k-means cl
 
 **question 2**:Consider the following distance matrix for data A to D. Cluster the data using hierarchical clustering (agglomerative). and than Draw its dendrogram.
 
-![alt text](.\images\DM_HW_03.jpg)
+![alt text](images/DM_HW_03.jpg)
 
 **answer:**
 
