@@ -96,3 +96,21 @@ The image in c part is a scatter plot representing the results of the k-means cl
 **question 2**:Consider the following distance matrix for data A to D. Cluster the data using hierarchical clustering (agglomerative). and than Draw its dendrogram.
 
 ![alt text](DM_HW_03.jpg)
+
+**answer:**
+
+Performing hierarchical clustering on paper using the given distance matrix. Here are the steps:
+
+1. **Initialization**: Start by treating each data point as a separate cluster. So, we have 4 clusters initially: {A}, {B}, {C}, and {D}.
+
+2. **Find the Closest Clusters**: Look at the distances between all pairs of clusters. According to your distance matrix, the smallest distance is 1, between A and B. So, clusters {A} and {B} are the closest clusters.
+
+3. **Merge the Closest Clusters**: Merge clusters {A} and {B} into a single cluster. Now, we have three clusters: {A, B}, {C}, and {D}.
+
+4. **Update the Distance Matrix**: We need to update the distances from the new cluster {A, B} to all other clusters. Since we're using single linkage (also known as nearest point algorithm), the distance between two clusters is the shortest distance from any member of one cluster to any member of the other cluster. So, the distance from {A, B} to {C} is the minimum of the distance from A to C and the distance from B to C. Similarly, calculate the distance from {A, B} to {D}.
+
+5. **Repeat Steps 2-4**: Repeat these steps until all data points are in a single cluster.
+
+The dendrogram is a tree-like diagram that shows this process. Each merge is represented by a line connecting the two clusters that were merged. The height of the line is the distance between the two clusters.
+
+![alt text](dendrogram.png)
