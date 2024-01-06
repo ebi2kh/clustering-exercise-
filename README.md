@@ -2,6 +2,7 @@
 
 Algorithm, K-means, hierarchical clustering algorithm
 
+**question 1**:
 Using k-means algorithm and Euclidean distance, cluster the data from A1 to A8. To start, consider A1, A4, A7 as the center of clusters.
 
 A1=(2,10), A2=(2,5), A3=(8,4), A4=(5,8), A5=(7,5), A6=(6,4), A7=(1,2), A8=(4,9)
@@ -17,6 +18,8 @@ c) Draw a 10x10 coordinate diagram and draw the new clusters and centers after t
 d) How many times (epoch) is needed for the algorithm to reach convergence? (You can draw only the coordinate diagram of each stage for convenience, otherwise show the clusters as a set.)
 
 **answer**
+
+**a**:
 
 solve this step by step using the k-means algorithm.
 
@@ -51,3 +54,43 @@ Let's calculate:
 This process is repeated until the centroids do not change significantly, or a certain number of iterations have been reached. For this question, we only need to calculate the algorithm once.
 
 Please note that the k-means algorithm does not guarantee an optimal solution because it depends on the initial placement of the centroids. Therefore, the final solution might be a local optimum. To mitigate this, the algorithm is usually run multiple times with different initial placements. The most common result is chosen as the final solution.
+
+"Show the new clusters as sets" means to present the final clusters after running the k-means algorithm once. Each cluster is a set of points that are closer to its centroid than to any other centroid.
+
+For example, if we have three clusters with centroids at A1, A4, and A7, the sets might look something like this:
+
+- Cluster 1 (Centroid A1): {A1, A8}
+- Cluster 2 (Centroid A4): {A4, A2}
+- Cluster 3 (Centroid A7): {A7, A3, A5, A6}
+
+This is just an example. The actual sets will depend on the results of the k-means algorithm. Each set represents a cluster, and each element in the set is a data point assigned to that cluster.
+
+**b:**
+
+The center of the new clusters is calculated as the mean of the points within each cluster. After running the k-means algorithm once, you would calculate the mean of each cluster and that would be your new center.
+
+For example, if Cluster 1 is {A1, A8}, the new center (let's call it C1\*) would be calculated as follows:
+
+C1\* = ((x1+x8)/2, (y1+y8)/2)
+
+Where (x1, y1) are the coordinates of A1 and (x8, y8) are the coordinates of A8.
+
+You would repeat this process for each cluster to find the new centers. The new centers are often marked with a star (\*) to distinguish them from the original centers.
+
+Please note that this is a simplified explanation. In practice, the k-means algorithm involves several iterations of the assignment and update steps until the centroids do not change significantly or a certain number of iterations have been reached.
+
+**c:**
+
+The image in c part is a scatter plot representing the results of the k-means clustering algorithm after one iteration. Here's what each element represents:
+
+- **Points**: The points on the graph represent the data points you provided (A1 to A8). Each point is plotted according to its coordinates on the 2D plane.
+
+- **Stars**: The stars on the graph represent the centers of the clusters after the first iteration of the k-means algorithm. These are the 'new' centroids calculated as the mean of the points in each cluster.
+
+- **Colors**: Each color represents a different cluster. All points of the same color belong to the same cluster.
+
+- **Grid and Marks**: The grid helps in visualizing the coordinates of the points and centroids. The marks from 0 to 10 on both axes represent the scale of the graph. They allow for precise placement and reading of the points and centroids.
+
+<br>
+
+**question 2**:
