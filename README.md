@@ -126,3 +126,66 @@ a) Obtain the vector of the above images based on the number of blue, red and ye
 b) Using distance criteria, get the distance of images a, b, c, d from image q and determine the closest image to q.
 
 c) Create a new feature vector for images in such a way that the best result is obtained using the arbitrary distance criterion from the above criteria.
+
+**answer**:
+
+a) Based on the image , we can count the number of each color in each grid to obtain the vectors. Here are the vectors for each image based on the number of blue, red, and yellow squares:
+
+```python
+a: [4, 1, 4]
+b: [7, 8, 1]
+c: [8, 1, 8]
+d: [11, 2, 3]
+q: [7, 1, 8]
+```
+
+Each vector represents the color composition of the corresponding image. The first element of the vector is the number of blue squares, the second element is the number of red squares, and the third element is the number of yellow squares.
+
+b) It's explained in code
+
+c) **Here's an explanation of the code and the question it addresses:**
+
+The goal is to create modified feature vectors for images in a way that leads to the best results when using a chosen distance criterion to compare images. This involves experimenting with different transformations of the original feature vectors.
+
+**Code Breakdown:**
+
+1. **Import numpy:**
+
+   - `import numpy as np` imports the NumPy library, essential for numerical computations and array operations.
+
+2. **Define original image vectors:**
+
+   - `image_vectors` is a dictionary storing the original feature vectors of the images, where keys are image names and values are arrays representing color counts (blue, red, yellow).
+
+3. **Choose a distance criterion:**
+
+   - `distance_criterion = dist2` selects the Euclidean distance (`dist2`) as the preferred criterion for comparing images.
+
+4. **Create new feature vectors:**
+
+   - `new_feature_vectors` will store the modified feature vectors.
+   - The loop iterates through each image vector:
+     - **Example 1: Vector normalization:**
+       - `new_feature_vectors[image_name] = image_vector / np.linalg.norm(image_vector)` normalizes the vector by dividing each element by its L2-norm. This makes all vectors have a length of 1.
+     - **Other examples (commented out):**
+       - Rescaling to a specific range: Adjusts values to fall within a certain range like 0 to 1.
+       - Non-linear transformations: Applies functions like logarithm or square root to feature values.
+
+5. **Print new feature vectors:**
+   - The code ends by printing the new, normalized feature vectors for each image.
+
+**Key Points:**
+
+- The code demonstrates vector normalization as one way to potentially improve image comparisons using a specific distance criterion.
+- Other transformations (rescaling, non-linear) might be more suitable depending on the problem and distance metric.
+- Determining the "best" transformation often involves experimentation and evaluation based on specific goals and datasets.
+
+Imagine we have some images and want to find the one most similar to a specific reference image. To do this, we need a way to represent each image mathematically. This is where feature vectors come in! They act like descriptions of the images, containing information like the number of pixels of different colors.
+
+Next, we need a way to tell how similar two images are based on their feature vectors. We can use a "distance metric" like Euclidean distance, which calculates a numerical value representing how different the vectors are. The smaller the distance, the more similar the images.
+
+But here's the kicker: we can tweak the feature vectors themselves to potentially improve the accuracy of our comparisons! One way to do this is normalization, which essentially rescales the vectors to have a consistent "size." This can make the distance metric less sensitive to differences in overall color count and focus more on relative proportions.
+
+We can also try other transformations, like rescaling the values to a certain range or applying mathematical functions like logarithms. These can alter the distribution of the numbers in the vector, potentially making it easier for the distance metric to distinguish between different types of images.
+
+The best transformation to use will depend on the specific dataset and task at hand. The key is to experiment and find the approach that leads to the most accurate and helpful comparisons for your specific needs. So, go out there, explore different ways to represent and transform your image data, and see what you can uncover!
